@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Calculator
 {
-    public class StringCalculator
+    public static class StringCalculator
     {
         public static int Add(string numbers)
         {
@@ -31,7 +31,7 @@ namespace Calculator
 
         private static bool HasSpecificDelimiter(string numbers) => numbers.StartsWith("//");
 
-        private static string GetPossibleDelimiter(string numbers) => ",\n";
+        private static string GetPossibleDelimiter() => ",\n";
 
         private static string GetSpecificDelimiter(string numbers) => numbers.Substring(2, numbers.IndexOf("\n", StringComparison.Ordinal) - 2);
 
